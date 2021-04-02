@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Home from './Pages/Home/index'
-import Sala from './Pages/Sala/index'
+import Home from '../Pages/Home/index'
+import Sala from '../Pages/Sala/index'
 
 
 export default function Routes(){
