@@ -1,7 +1,8 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Home from '../Pages/Home/index'
-import Sala from '../Pages/Sala/index'
+import Home from '../pages/Home/index'
+import Sala from '../pages/Sala/index'
+import Jogo from '../pages/Jogo/jogoPrincipal';
 
 
 export default function Routes(){
@@ -10,6 +11,7 @@ export default function Routes(){
             <Switch>
                 <Route path='/' exact component={Home} />
                 <Route path='/sala' exact component={Sala} />
+                <Route path='/jogo' exact component={Jogo} />
             </Switch>
         </BrowserRouter>
     );
