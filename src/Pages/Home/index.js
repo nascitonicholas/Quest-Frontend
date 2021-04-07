@@ -1,5 +1,5 @@
 import { React } from "react";
-import Header from './Components/Header'
+import Header from '../../shared/components/header'
 import Login from './Components/Login'
 
 export default function Home() {

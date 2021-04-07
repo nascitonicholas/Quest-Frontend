@@ -1,16 +1,18 @@
 import { React } from "react";
-import Header from '../Home/Components/Header'
+import Header from '../../shared/components/header'
 import Apresentacao from '../Home/Components/Apresentacao'
 import BoxCentral from './Components/BoxCentral'
+import Footer from '../../shared/components/footer';
 
 
-export default function Home() {
+export default function Sala() {
 
   return (
     <div className="container">
       <Header />
-      <Apresentacao mensagem='Seja Bem Vindo Wellington'/>
+      <Apresentacao mensagem='Bem Vindo ao APP'/>
       <BoxCentral/>
+      <Footer/>
     </div>
       
   )

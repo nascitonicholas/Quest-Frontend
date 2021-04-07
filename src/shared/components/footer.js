@@ -1,13 +1,27 @@
 import React from 'react';
-import './css/footerStyle.css';
+import '../css/footer.css';
 
 export default function Footer() {
 
-  return(
-    <footer class="footer" >
-      <div class="footerContainer" >
-        <p class="versao" >Versão 1.0</p>
+  return (
+    <footer id="Footer">
+      <div class="container">
+        <div class="row">
+          <div class="conteudo">
+            <h5>Sobre-nós</h5>
+            <ul>
+              <li>Informações da Empresa</li>
+              <li>Contato</li>
+            </ul>
+            <a href="">
+              <button type="button" class="btn btn-default">Contato</button>
+            </a>
+          </div>
+        </div>
       </div>
-    </footer>   
+      <div class="footer-copyright">
+        <p>© 2021 Copyright - Quest</p>
+      </div>
+    </footer>
   );
 };
