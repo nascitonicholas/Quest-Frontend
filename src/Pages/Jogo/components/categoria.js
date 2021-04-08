@@ -1,19 +1,8 @@
 import React from 'react';
+import CriaCategorias from '../../../shared/components/quadrados';
 
 export default function Categoria() {
-  /*const [categorias] = localStorage.getItem('categoriasPerguntaRodada');*
-  /*Somente teste para não dar erro de null*/
-  const categorias = ['Tecnologia','Português']
+  const [categorias] = localStorage.getItem('categoriasPerguntaRodada') || ['Tecnologia','Português'];
 
-  return(
-    <div>
-      {
-        categorias.map(categoria => (
-          <div className="categoria" >
-            <p>{categoria}</p>
-          </div>
-        ))
-      }
-    </div>
-  );
+  return(<CriaCategorias itens={categorias} page={'categorias'} />);
 };
