@@ -1,7 +1,6 @@
 import React from 'react';
-import '../style.css'
-import Label from './Label'
-import Button from './Button'
+import Label from '../../../../shared/components/Label/label.js';
+import Button from '../../../../shared/components/Button/button.js';
 
 export default  function Login () {
 

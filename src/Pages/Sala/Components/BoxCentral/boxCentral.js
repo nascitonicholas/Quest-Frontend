@@ -1,8 +1,8 @@
 import React from 'react';
-import '../css/boxcentral.css'
-import Button from '../../Home/Components/Button'
-import BoxMensagem from './BoxMensagem'
-import ListSalas from './ListSalas'
+import './boxcentral.css';
+import Button from '../../../../shared/components/Button/button.js';
+import BoxMensagem from '../../../../shared/components/BoxMensagem/boxMensagem.js';
+import ListSalas from '../ListaSalas/listaSalas.js';
 
 export default function BoxCentral(){
 

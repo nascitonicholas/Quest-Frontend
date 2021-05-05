@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function criaQuadrados(itens, page, ...props) {
+export default function criaQuadrados( {itens, page }) {
 
   return(
     <div>

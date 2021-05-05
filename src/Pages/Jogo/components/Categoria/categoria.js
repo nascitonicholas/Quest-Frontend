@@ -1,8 +1,8 @@
 import React from 'react';
-import CriaCategorias from '../../../shared/components/quadrados';
+import Quadrados from '../../../../shared/components/Quadrados/quadrados.js';
 
 export default function Categoria() {
   const [categorias] = localStorage.getItem('categoriasPerguntaRodada') || ['Tecnologia','Português'];
 
-  return(<CriaCategorias itens={categorias} page={'categorias'} />);
+  return(<Quadrados itens={categorias} page={'categorias'} />);
 };
