@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Header from '../../shared/components/header';
-import Footer from '../../shared/components/footer';
-import CategoriaPergunta from './components/categoria';
-import ApostarPergunta from './components/aposta';
-import ResponderPergunta from './components/resposta';
-import ResultadoPergunta from './components/resultado';
+import Header from '../../shared/components/Header/header.js';
+import Footer from '../../shared/components/Footer/footer.js';
+import CategoriaPergunta from './components/Categoria/categoria.js';
+import ApostarPergunta from './components/Aposta/aposta.js';
+import ResponderPergunta from './components/Resposta/resposta.js';
+import ResultadoPergunta from './components/Resultado/resultado.js';
 
 import '../../shared/css/global.css';
 import './jogoPrincipalStyle.css';
