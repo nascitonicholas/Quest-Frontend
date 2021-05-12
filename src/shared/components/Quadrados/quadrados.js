@@ -3,6 +3,8 @@ import './quadrados.css'
 
 export default function CriaQuadrados({itens, page}) {
 
+  const buttonColor = ['#FF0000','#6A5ACD','#FFD700','#00BFFF'];
+
   switch (page) {
     case 'Categorias':
       return(
@@ -10,6 +12,7 @@ export default function CriaQuadrados({itens, page}) {
           <ul>
             {itens.map(item => (
               <li>
+                <button style={{background: `buttonColor[0]` }} onClick={handle}></button>
                 <p>{item}</p>
               </li>
             ))}
@@ -29,4 +32,8 @@ export default function CriaQuadrados({itens, page}) {
         </div>
       );
   };
+}
+
+function handle() {
+
 }
