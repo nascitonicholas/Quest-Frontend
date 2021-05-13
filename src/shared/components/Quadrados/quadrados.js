@@ -1,9 +1,7 @@
 import React from 'react';
-import './quadrados.css'
+import './quadrados.css';
 
 export default function CriaQuadrados({itens, page}) {
-
-  const buttonColor = ['#FF0000','#6A5ACD','#FFD700','#00BFFF'];
 
   switch (page) {
     case 'Categorias':
@@ -11,8 +9,10 @@ export default function CriaQuadrados({itens, page}) {
         <div className="quadrado-container">
           <ul>
             {itens.map(item => (
-              <li>
-                <button style={{background: `buttonColor[0]` }} onClick={handle}></button>
+              <li key={item}>
+                <div>
+                  <button onClick={handle}></button>
+                </div>
                 <p>{item}</p>
               </li>
             ))}

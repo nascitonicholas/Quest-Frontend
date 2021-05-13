@@ -19,7 +19,7 @@
 }
 
 .quadrado-container ul li {
-  border: 3px solid #dcdce6;
+  border: 3px solid #ff0000;
   height: 200px;
   padding: 24px;
   border-radius: 8px;
@@ -48,10 +48,14 @@
   width: 150px;
   border-radius: 10px;
   border: 1px solid #dcdce6;
-
+  background-color: #ff0000;
+  align-items: center;
   transition: border-color 0.2s;
   mix-blend-mode: normal;
   transform: matrix(1, 0, -0.01, 1, 0, 0);
+  position: relative;
+  margin-left: 35%;
+  margin-bottom: 15px;
 }
 
 .quadrado-container ul button:hover {
