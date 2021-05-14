@@ -1,7 +1,14 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import './quadrados.css';
 
 export default function CriaQuadrados({itens, page}) {
+  const history = useHistory();
+  
+  async function handleCategoriaEscolhida(item) {
+    localStorage.setItem('categoriaEscolhida', item);
+    history.push('/aposta');
+  }
 
   switch (page) {
     case 'Categorias':
@@ -11,7 +18,7 @@ export default function CriaQuadrados({itens, page}) {
             {itens.map(item => (
               <li key={item}>
                 <div>
-                  <button onClick={handle}></button>
+                  <button onClick={() => handleCategoriaEscolhida(item)} type="button"></button>
                 </div>
                 <p>{item}</p>
               </li>
@@ -32,8 +39,4 @@ export default function CriaQuadrados({itens, page}) {
         </div>
       );
   };
-}
-
-function handle() {
-
-}
+};
