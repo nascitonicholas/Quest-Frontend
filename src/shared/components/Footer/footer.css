@@ -1,63 +1,18 @@
 #Footer {
   background-color: #3c3d41;
+  height: 5%;
+  width: 100%;
   color: white;
   padding-top: 0px;
-  margin-top: 5%;
+  margin-top: 40px;
   padding-block-end: 1px;
-}
-
-#Footer .container{
-  padding-block-start: 5px;
-  padding-block-end: 10px;
-}
-#Footer .footer-copyright {
-  background-color: #333333;
-  padding-top: 5px;
-  padding-bottom: 3px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   text-align: center;
-}
-
-#Footer .row {
-  margin-bottom: 20px;
 }
 
 #Footer .footer-copyright p {
   margin: 10px;
   color: #ccc;
 }
-
-#Footer .container .conteudo{
-  text-align: center;
-}
-
-#Footer ul {
-  list-style-type: none;
-  padding-left: 0;
-  line-height: 1.7;
-}
-
-#Footer h5 {
-  font-size: 18px;
-  color: white;
-  font-weight: bold;
-  margin-top: 30px;
-  align-items: center;
-}
-
-#Footer a {
-  color: #d2d1d1;
-  text-decoration: none;
-}
-
-#Footer .btn {
-  color: white;
-  background-color: #d84b6b;
-  border-radius: 20px;
-  border: none;
-  width: 150px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 5px;
-  line-height: 25px;
-}
-
