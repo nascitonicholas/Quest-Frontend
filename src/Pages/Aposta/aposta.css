@@ -14,7 +14,6 @@ button {
   color: #fff;
   text-align: center;
   text-transform: none;
-  transition: filter 0.2s;
 }
 
 .btnFlagAcertar {
@@ -32,10 +31,6 @@ button {
   margin-left: 280px;
 }
 
-.btnFlagAcertar {
-  filter: brightness(80%);
-}
-
 .divFichas {
   padding-left: 220px;
   align-items: center;
@@ -49,10 +44,6 @@ button {
   border-color: #1e90ff;
   font-size: 24px;
   text-align: center;
-}
-
-.btnAposta:hover {
-  filter: brightness(80%);
 }
 
 .btnAposta + .btnAposta {

@@ -4,7 +4,7 @@ import Header from '../../shared/components/Header/header.js';
 import Footer from '../../shared/components/Footer/footer.js';
 import './aposta.css';
 
-export default function Jogo() {
+export default function Aposta() {
   const perguntaEscolhida = localStorage.getItem('perguntaEscolhida');
   const jogador = localStorage.getItem('jogador');
   const [buttonFichasHabilitado, setButtonFichasHabilitado] = useState(false);
