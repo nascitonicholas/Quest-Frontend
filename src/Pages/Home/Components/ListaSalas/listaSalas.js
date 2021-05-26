@@ -1,83 +1,73 @@
 import React from 'react';
-import './listaSalas.css'
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
-export default function listaSalas(){
-
-    const salasDisponiveis = localStorage.getItem('salasDisponiveis') 
-      || [
-          {
-           'nomeSala' : 'Sala A',
-           'quantidadeJogadores'  : '2'
-          },
-          {
-            'nomeSala' : 'Sala B',
-            'quantidadeJogadores'  : '4'
-           },
-           {
-            'nomeSala' : 'Sala C',
-            'quantidadeJogadores'  : '4'
-           },
-           {
-            'nomeSala' : 'Sala D',
-            'quantidadeJogadores'  : '4'
-           },
-           {
-            'nomeSala' : 'Sala E',
-            'quantidadeJogadores'  : '4'
-           },
-           {
-            'nomeSala' : 'Sala F',
-            'quantidadeJogadores'  : '4'
-           },
-           {
-            'nomeSala' : 'Sala G',
-            'quantidadeJogadores'  : '4'
-           },
-           {
-            'nomeSala' : 'Sala H',
-            'quantidadeJogadores'  : '4'
-           },
-           {
-            'nomeSala' : 'Sala I',
-            'quantidadeJogadores'  : '4'
-           },
-           {
-            'nomeSala' : 'Sala J',
-            'quantidadeJogadores'  : '4'
-           },
-           {
-            'nomeSala' : 'Sala K',
-            'quantidadeJogadores'  : '4'
-           },
-           {
-            'nomeSala' : 'Sala L',
-            'quantidadeJogadores'  : '4'
-           }
-
-         ];
-  
-  const salas = getSalasDisponiveis(salasDisponiveis);
-
-    return(
-        <div>
-            <div className="box">
-                {
-                    salas.map(sala => (
-                        <div className='item-box'>
-                            <p>{sala}</p>
-                        </div>
-                    ))
-                }
-            </div>
-        </div>
-    )
-};
-
-function getSalasDisponiveis(arraySalasAbertas){
-    var resultado = [];
-    for(var i in arraySalasAbertas){
-        resultado.push(arraySalasAbertas[i].nomeSala);
+const useStyles = makeStyles(theme => ({
+    formControl: {
+        margin: theme.spacing(2),
+        minWidth: 370,
+        maxWidth: 300
+    },
+    chips: {
+        display: 'flex',
+        flexWrap: 'wrap'
+    },
+    chip: {
+        margin: 4
+    },
+    noLabel: {
+        marginTop: theme.spacing(6)
     }
+}));
 
-    return resultado;
+
+
+const names = [
+    'Sala A',
+    'Sala B',
+    'Sala C',
+    'Sala D',
+    'Sala E'
+];
+
+export default function MultipleSelect() {
+    const classes = useStyles();
+    const [personName, setPersonName] = React.useState([]);
+
+    const handleChangeMultiple = event => {
+        const { options } = event.target;
+        const value = [];
+        for (let i = 0, l = options.length; i < l; i++) {
+            if (options[i].selected) {
+                value.push(options[i].value);
+            }
+        }
+        setPersonName(value);
+    };
+
+    return (
+        <div>
+
+            <FormControl className={classes.formControl}>
+                <Select
+                    multiple
+                    native
+                    value={personName}
+                    onChange={handleChangeMultiple}
+                    inputProps={{
+                        id: 'select-multiple-native'
+                    }}
+                >
+                    {names.map(name => (
+                        <option key={name} value={name}>
+                            {name}
+                        </option>
+                        
+                    ))}
+
+                </Select>
+            </FormControl>
+        </div>
+    );
 }

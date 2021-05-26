@@ -7,7 +7,7 @@ export default function container(){
     
     return(
         <div className='container'>
-            <h1>Entre em uma Sala</h1>
+            <h1>Entre em uma sala</h1>
             <ListaSalas/>
             <p>Se Desejar crie uma Nova Sala</p>
             <Button link='novasala' name='Nova Sala' class='button'/>

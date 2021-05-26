@@ -7,7 +7,7 @@ export default  function Login () {
 
         return (
             <div className="login">
-                <h1>Seu Apelido</h1>
+                <h1 className='apelido'>Seu Apelido</h1>
                 <Label/>
                 <Button link='/sala' name='Confirmar' class='button'/>
             </div>

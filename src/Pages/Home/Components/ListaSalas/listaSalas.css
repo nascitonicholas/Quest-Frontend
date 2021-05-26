@@ -5,3 +5,12 @@
     margin-left: 4%;
     overflow: scroll;
 }
+
+.box .item-box{
+    align-items: center;
+}
+
+.formControl{
+    min-width: 120;
+    max-width: 300;
+}

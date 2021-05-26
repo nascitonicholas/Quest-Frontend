@@ -6,8 +6,11 @@
     height: 450px;
     margin-left: 45%;
     margin-top: -220px;
+    align-items: center;
 }
 
-.box-central .container #p{
-    font-size: larger;
+h1{
+    font-size: 30px;
+    margin-left: 15px;
+    font-family: sans-serif;
 }
