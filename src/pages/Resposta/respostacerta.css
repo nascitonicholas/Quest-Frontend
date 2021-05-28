@@ -1,0 +1,78 @@
+body {
+        text-align: center;
+        padding: 40px 0;
+        background: #EBF0F5;
+      }
+        .h1 {
+          color: #88B04B;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-weight: 900;
+          font-size: 40px;
+          margin-bottom: 10px;
+          
+        }
+        .p {
+          color: #ffffff;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-size:20px;
+          margin: 0;
+          
+        }
+      i {
+        color: #18dd06;
+        font-size: 170px;
+        line-height: 200px;
+        margin-left:-15px;
+        text-align: center;
+        font-style: normal;
+        
+        position: relative;
+        border-radius:100px; 
+        height:200px; 
+        width:200px; 
+        
+        margin:0 auto;
+      }
+      ierror {
+        color: #f01212;
+        font-size: 170px;
+        line-height: 185px;
+        margin-left:-15px;
+        text-align: center;
+        font-style: normal;
+        
+        position: relative;
+        border-radius:100px; 
+        height:200px; 
+        width:200px; 
+        
+        margin: 0 auto;
+      }
+      .card {
+        background: Green;
+        padding: 60px;
+        border-radius: 4px;
+        box-shadow: 0 2px 3px #C8D0D8;
+        display: inline-block;
+        font-style: normal;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .carderror {
+        background: red;
+        padding: 60px;
+        border-radius: 4px;
+        box-shadow: 0 2px 3px #C8D0D8;
+        display: inline-block;
+        font-style: normal;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .circle{
+        border-radius:200px; 
+        height:200px; 
+        width:200px; 
+        background: #F8FAF5; 
+        margin:0 auto;
+      }

@@ -1,0 +1,18 @@
+#Footer {
+  background-color: #3c3d41;
+  height: 5%;
+  width: 100%;
+  color: white;
+  padding-top: 0px;
+  margin-top: 40px;
+  padding-block-end: 1px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+#Footer .footer-copyright p {
+  margin: 10px;
+  color: #ccc;
+}
