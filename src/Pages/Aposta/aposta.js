@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Header from '../../shared/components/Header/header.js';
+import Timer from '../../shared/components/Cronometro/timer.jsx';
 import Footer from '../../shared/components/Footer/footer.js';
 import './aposta.css';
 
@@ -31,6 +32,9 @@ export default function Aposta() {
     <div>
       <Header />
       <h1>Pergunta para o Jogador da vez: {perguntaEscolhida.toUpperCase()}</h1>
+      <div className="cronometro">
+        <Timer />
+      </div>
       <h2>Apostar:</h2>
       <div className="divAcertar">
         <button className="btnFlagAcertar" disabled={buttonAcertarHabilitado} onClick={() => defineCondicaoAposta(true)} >ACERTAR</button>

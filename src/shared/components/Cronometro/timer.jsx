@@ -10,7 +10,7 @@ class Timer extends Component {
       actualTime: 30,
       btnPlayPause: "Play"
     };
-
+    this.initTimer();
     this.counter = null;
     this.initTimer = this.initTimer.bind(this);
     this.clearTimer = this.clearTimer.bind(this);
@@ -23,6 +23,9 @@ class Timer extends Component {
       this.setState({ btnPlayPause: "Play" });
     } else {
       this.counter = setInterval(() => {
+        if (this.actualTime === 0) {
+          this.pauseTimer();
+        }
         this.setState({ actualTime: this.state.actualTime - 0.1 });
       }, 100);
       this.setState({ btnPlayPause: "Pause" });

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../../shared/components/Header/header.js';
 import Footer from '../../shared/components/Footer/footer.js';
 import Timer from '../../shared/components/Cronometro/timer.jsx';
@@ -16,14 +16,10 @@ export default function Resposta() {
         <Timer />
       </div>
       <div className="alternativas-container">
-        <div className="blocos-container">
-         <p>{alternativas[0]}</p>
-         <p>{alternativas[1]}</p>
-        </div>
-        <div className="blocos-container">
-         <p>{alternativas[2]}</p>
-         <p>{alternativas[3]}</p>
-        </div>
+        <button className="blocos-container" type="button" >{alternativas[0]}</button>
+        <button className="blocos-container" type="button" >{alternativas[1]}</button>
+        <button className="blocos-container" type="button" >{alternativas[2]}</button>
+        <button className="blocos-container" type="button" >{alternativas[3]}</button>
       </div>
       <Footer />
     </div>

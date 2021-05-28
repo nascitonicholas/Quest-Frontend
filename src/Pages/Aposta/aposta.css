@@ -1,10 +1,8 @@
 h1 {
   text-align: center;
-  margin-top: 200px;
 }
 
 h2 {
-  margin-top: 150px;
   margin-left: 220px;
 }
 
@@ -13,7 +11,21 @@ button {
   border: 1px solid #dcdce6;
   color: #fff;
   text-align: center;
-  text-transform: none;
+  cursor: pointer;
+}
+
+.cronometro {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: left;
+}
+
+.time {
+  margin-bottom: 0px;
+}
+
+.time h2 {
+  margin-top: 140px;
 }
 
 .btnFlagAcertar {
