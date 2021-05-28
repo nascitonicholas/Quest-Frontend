@@ -1,0 +1,15 @@
+/*Header*/
+.header-container {
+  height: 70px;
+  width: 100%;
+  background-color: #85c1e9;
+  padding-top: 1%;
+}
+
+.header-container h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: azure;
+  margin-top: 0;
+  text-align: center;
+}

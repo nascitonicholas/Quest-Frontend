@@ -1,0 +1,16 @@
+.box-central .container{
+    border-style: solid;
+    border-color: #95a5a6;
+    border-radius: 3.5%;
+    width: 400px;
+    height: 450px;
+    margin-left: 45%;
+    margin-top: -220px;
+    align-items: center;
+}
+
+h1{
+    font-size: 30px;
+    margin-left: 15px;
+    font-family: sans-serif;
+}
