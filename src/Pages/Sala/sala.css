@@ -1,0 +1,29 @@
+a.button-nova-sala{
+    display:inline-block;
+    padding: 1.0em 2em;
+    margin-top: 35%;
+    margin-left: 38%;
+    border-radius:12%;
+    font-family:'Roboto',sans-serif;
+    font-weight:600;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align:center;
+    text-decoration: none;
+  }
+  
+  a.button-nova-sala:hover{
+    background-color:#4095c6;
+  }
+
+  .box-mensagem{
+      width: 50%;
+      margin-left: 25%;
+      border-style: solid;
+      border-width: 5px 5px;
+  }
+
+  .box-mensagem p {
+      text-align: center;
+      font-weight: 600;
+  }
