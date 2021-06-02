@@ -1,8 +1,10 @@
 import { React } from "react";
 import Header from '../../shared/components/Header/header'
-import Footer from '../../shared/components/Footer/footer'
-import BoxCentral from './components/BoxCentral/BoxCentral'
+import Login from './Components/Login/login.js'
+
 export default function Home() {
+
+  localStorage.clear();
 
   return (
     <div className="container">

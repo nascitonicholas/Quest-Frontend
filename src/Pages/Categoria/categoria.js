@@ -8,42 +8,35 @@ export default function Categoria() {
       || [
           {
            'categoria' : 'Tecnologia',
-           'Pergunta'  : 'O que é tecnologia?',
-           'Respostas' : ['Tecnologia A', 'Tecnologia B', 'Tecnologia C', 'Tecnologia D']
+           'pergunta'  : 'O que é tecnologia?',
+           'respostas' : ['Tecnologia A', 'Tecnologia B', 'Tecnologia C', 'Tecnologia D'],
+           'respostaCe': 'Tecnologia A'
           },
           {
             'categoria' : 'História',
-            'Pergunta'  : 'O que é historia?',
-            'Respostas' : ['Historia A', 'Historia B', 'Historia C', 'Historia D']
+            'pergunta'  : 'O que é historia?',
+            'respostas' : ['Historia A', 'Historia B', 'Historia C', 'Historia D'],
+            'respostaCe': 'Historia B'
           },
           {
           'categoria' : 'Matematica',
-          'Pergunta'  : 'O que é matematica',
-          'Respostas' : ['Matematica A', 'Matematica B', 'Matematica C', 'Matematica D']
+          'pergunta'  : 'O que é matematica',
+          'respostas' : ['Matematica A', 'Matematica B', 'Matematica C', 'Matematica D'],
+          'respostaCe': 'Matematica C'
           },
           {
           'categoria' : 'Infraestrutura',
-          'Pergunta'  : 'O que é Infraestrutura?',
-          'Respostas' : ['Infraestrutura A', 'Infraestrutura B', 'Infraestrutura C', 'Infraestrutura D']
+          'pergunta'  : 'O que é Infraestrutura?',
+          'respostas' : ['Infraestrutura A', 'Infraestrutura B', 'Infraestrutura C', 'Infraestrutura D'],
+          'respostaCe': 'Infraestrutura D'
           }
          ];
   
-  const categorias = getCategorias(categoriasPerguntasRespostas);
-  
-
   return(
     <div>
       <Header />
-      <Quadrados itens={categorias} page='Categorias' />
+      <Quadrados itens={categoriasPerguntasRespostas} page='Categorias' />
       <Footer />
     </div>
   );
 };
-
-function getCategorias(arrayCategoriasPerguntasRespostas) {
-  var resultado = [];
-  for(var i in arrayCategoriasPerguntasRespostas){
-    resultado.push(arrayCategoriasPerguntasRespostas[i].categoria);
-  }
-  return resultado;
-}
