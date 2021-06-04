@@ -5,9 +5,9 @@ import Select from '@material-ui/core/Select';
 
 const useStyles = makeStyles(theme => ({
     formControl: {
-        margin: theme.spacing(2),
-        minWidth: 370,
-        maxWidth: 300
+        margin: theme.spacing(3),
+        minWidth: 300,
+        maxWidth: 400
     },
     chips: {
         display: 'flex',
@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
         margin: 4
     },
     noLabel: {
-        marginTop: theme.spacing(6)
+        marginTop: theme.spacing(1)
     }
 }));
 
@@ -47,8 +47,7 @@ export default function MultipleSelect() {
     };
 
     return (
-        <div>
-
+        <div className="box-lista-sala">
             <FormControl className={classes.formControl}>
                 <Select
                     multiple
@@ -62,8 +61,9 @@ export default function MultipleSelect() {
                     {names.map(name => (
                         <option key={name} value={name}>
                             {name}
+                            {1}
                         </option>
-                        
+
                     ))}
 
                 </Select>
