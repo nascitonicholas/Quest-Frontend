@@ -37,9 +37,7 @@
   Margin: 10px;
 
 }
-.quadrado-containerSala  li img{
-  width: 400px;
-}
+
 .quadrado-containerSala  li {
   display: grid;
   grid-template-columns: repeat(4, 2fr);

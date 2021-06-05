@@ -66,12 +66,8 @@ export default function Resposta(resposta) {
               <div class="circle">
             <ierror class="MULTIPLICATION X">✕</ierror>
             </div>
-            <h1>Errado</h1>
-            <p> <span id='teste'></span></p>
-            <script type="text/javascript">
-              window.onload = Mensagem(mensagem);
-            </script>
-            
+            <h1>Errado</h1> 
+            <p>Poxa, não foi dessa vez!</p>
             
           </div>
               <Footer />
