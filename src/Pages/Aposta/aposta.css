@@ -1,0 +1,63 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-left: 220px;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid #dcdce6;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cronometro {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: left;
+}
+
+.time {
+  margin-bottom: 0px;
+}
+
+.time h2 {
+  margin-top: 140px;
+}
+
+.btnFlagAcertar {
+  height: 50px;
+  width: 100px;
+  margin-left: 650px;
+  margin-bottom: 20px;
+  border-color: #006400;
+  background-color: green;
+}
+
+.btnFlagAcertar + .btnFlagAcertar {
+  border-color: #8b0000;
+  background-color: red;
+  margin-left: 280px;
+}
+
+.divFichas {
+  padding-left: 220px;
+  align-items: center;
+}
+
+.btnAposta {
+  height: 100px;
+  width: 200px;
+  margin-right: 30px;
+  background-color: #85c1e9;
+  border-color: #1e90ff;
+  font-size: 24px;
+  text-align: center;
+}
+
+.btnAposta + .btnAposta {
+  margin-left: 150px;
+}

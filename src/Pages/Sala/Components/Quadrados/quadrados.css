@@ -1,0 +1,93 @@
+.quadrado-containerSala {
+  width: 50%;
+  height: 820px;
+  max-width: 1180px;
+  padding: 0 30px;
+  margin: auto;
+  margin-bottom: 1000px;
+  
+}
+.quadrado-containerSala .containersala .buttoninit{
+  position: center;
+  display:inline-block;
+    padding: 1.0em 2em;
+    margin-top: 35%;
+    margin-left: 45%;
+    border-radius:12%;
+    font-family:'Roboto',sans-serif;
+    font-weight:600;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align:center;
+    text-decoration: none;
+}
+
+.quadrado-containerSala h1 {
+  margin-top: 80px;
+  margin-bottom: 24px;
+  border: 3px solid #00e1ff;
+  
+}
+
+.quadrado-containerSala ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+  list-style: none;
+  padding-inline-start: 10px;
+  Margin: 10px;
+
+}
+
+.quadrado-containerSala  li {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-gap: 24px;
+  list-style: none;
+  border: 1px solid #00e1ff;
+  height: 200px;
+  padding: 24px;
+  border-radius: 8px;
+  position: relative;
+  top: 100%;
+  
+}
+
+.quadrado-containerSala li p + strong {
+  margin-top: 32px;
+  
+}
+
+.quadrado-containerSala li p {
+  color: #000;
+  text-align: center;
+  line-height: 30px;
+  font-size: 24px;
+}
+
+.quadrado-containerSala li button {
+  line-height: 21px;
+  font-size: 16px;
+  border: 3px solid #dcdce6;
+  background-color: #00e1ff;
+  margin-left: 35%;
+}
+
+.quadrado-containerSala  button {
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  border: 1px solid #dcdce6;
+  background-color: #00e1ff;
+  align-items: center;
+  transition: border-color 0.2s;
+  mix-blend-mode: normal;
+  transform: matrix(1, 0, -0.01, 1, 0, 0);
+  position: relative;
+  margin-left: 45%;
+  margin-bottom: 15px;
+}
+
+.quadrado-containerSala  button:hover {
+  border-color: #000;
+}
