@@ -4,7 +4,8 @@ import Quadrados from '../../shared/components/Quadrados/quadrados.js';
 import Footer from '../../shared/components/Footer/footer.js';
 import  './resultado.css'
 
-export default function Resultado(resposta) {
+
+export default function Resposta(resposta) {
    /* switch (resposta) {
         case 'Correto': 
     return (
@@ -16,7 +17,7 @@ export default function Resultado(resposta) {
         </div>
         <h1>Correta</h1> 
         <p>Parabéns, voce acertou!</p>
-      
+        <meta http-equiv="refresh" content="5;url=../" />
       </div>
           <Footer />
       </div>
@@ -34,6 +35,7 @@ export default function Resultado(resposta) {
             </div>
             <h1>Errado</h1> 
             <p>Poxa, não foi dessa vez!</p>
+            
           </div>
               <Footer />
             </div>
