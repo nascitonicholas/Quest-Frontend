@@ -1,15 +1,17 @@
 import React from 'react';
-import './container.css'
+import './containersala.css'
 import Buttoninit from '../../../../shared/components/Button/button.js';
 import ListaSalas from '../ListaSalas/listaSalas'
+import Quadrados from "../Quadrados/quadrados.js"
 
 export default function containersala(){
     
     return(
         <div className='containersala'>
-            <h1>Sala XPTO</h1>
+            <h2>Sala XPTO</h2>
             
-            <p>Quando estiver pronto, Clique em iniciar</p>
+            <g>Quando estiver pronto, Clique em iniciar</g>
+            <Quadrados/>
             <Buttoninit link='categoria' name='Iniciar' class='buttoninit'/>
         </div>
     )

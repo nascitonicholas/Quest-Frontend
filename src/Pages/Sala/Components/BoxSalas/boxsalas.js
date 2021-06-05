@@ -1,14 +1,15 @@
 import React from 'react';
-import './boxcentral.css';
+import './boxsalas.css';
 import Button from '../../../../shared/components/Button/button.js';
 import Login from '../Login/login';
 import Containersala from '../Container/containersala'
+import Containernovasala from '../Container/containernovasala'
 
-export default function BoxCentral(){
+export default function BoxSalas(){
 
     return(
-        <div className="box-central">
-            
+        <div className="box-salas">
+            <Containernovasala/>
             <Containersala/>
         </div>
     )
