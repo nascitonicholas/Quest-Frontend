@@ -43,14 +43,6 @@ let animations = ['https://i.pinimg.com/originals/e5/93/ab/e593ab0589d5f1b389e4d
 
 
 
-
-
-
-
-
-
-
-
 export default function Resposta(resposta) {
   Mensagem(mensagem);
   

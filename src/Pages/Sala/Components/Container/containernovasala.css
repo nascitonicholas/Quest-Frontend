@@ -1,0 +1,28 @@
+.box-salas .containernovasala{
+    width: 280px;
+    height: 200px;
+    border-radius: 2%;
+    
+    border-width: 1px 1px 1px 1px;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.box-salas .containernovasala #p{
+    font-size: larger;
+}
+
+.box-salas h1{
+    font-size: larger;
+    margin-top: 0%;
+    font-size: 1.5em;
+    margin-right: 62%;
+}
+.box-salas .Label-NovaSala{
+    margin-left: 10%;
+}
+
+.box-salas a.button{
+    margin-right: 0%;
+    margin-left: 10%;
+}

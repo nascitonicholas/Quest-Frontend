@@ -5,35 +5,50 @@ import Buttoninit from '../../../../shared/components/Button/button.js';
 
 export default function CriaQuadrados({itens, page}) {
   const history = useHistory();
-  
+  itens = [
+    {
+    name:"Roberto",
+    icone: "https://www.amcharts.com/lib/images/faces/C01.png"  
+  }, 
+  {
+    name:"Gabriel",
+    icone: "https://www.amcharts.com/lib/images/faces/C02.png" 
+  },
+  {
+    name:"Kaique",
+    icone: "https://www.amcharts.com/lib/images/faces/C04.png" 
+  }, 
+  {
+    name:"Carlos",
+    icone: "https://www.amcharts.com/lib/images/faces/C03.png" 
+  }
+  ]
   async function handleCategoriaEscolhida(item) {
     localStorage.setItem('categoriaEscolhida', item);
     history.push('/sala');
   }
 
-  switch (page) {
-    case 'Sala':
+ // switch (page) {
+   // case 'Sala':
       return(
         <div className="quadrado-containerSala">
-          <div className='containersala'>
-            <h2>Sala XPTO</h2>
-            
-            <p>Quando estiver pronto, Clique em iniciar</p>
-          
+          <ul>
             {itens.map(item => (
-              <li key={item}>
-                <div>
-                  <button onClick={() => handleCategoriaEscolhida(item)} type="button"></button>
-                </div>
-                <p>{item}</p>
+              <li key={item.name}>
+                
+                
+                  <img src={item.icone} alt=""/>
+                                
+                <p>{item.name}</p>
               </li>
             ))}
-          
-          <Buttoninit link='categoria' name='Iniciar' class='buttoninit'/>
-          </div>
+          </ul>
         </div>
+          
+          
+        
       );
-    default:
+   /* default:
       return(
         <div className="quadrado-container">
           {itens.map(item => (
@@ -44,6 +59,6 @@ export default function CriaQuadrados({itens, page}) {
             </div>
           ))}
         </div>
-      );
-  };
+      );*/
+ // };
 };

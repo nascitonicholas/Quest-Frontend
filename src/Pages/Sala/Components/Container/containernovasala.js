@@ -1,10 +1,10 @@
 import React from 'react';
-import './container.css'
+import './containernovasala.css'
 import LabelNovaSala from '../../../../shared/components/Label/labelNomeDaSala.js';
 import Button from '../../../../shared/components/Button/button.js';
 import ListaSalas from '../ListaSalas/listaSalas'
 
-export default function container(){
+export default function containernovasala(){
     
     return(
         <div>
