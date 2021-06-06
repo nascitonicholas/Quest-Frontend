@@ -57,11 +57,12 @@ ierror {
   font-style: normal;
   margin: 0 auto;
   text-align: center;
+  margin-left:40%;
 }
 .carderror {
   background: red;
   padding: 120px;
-  border-radius: 4px;
+  border-radius: 3px;
   box-shadow: 0 2px 3px #C8D0D8;
   display: inline-block;
   font-style: normal;
@@ -76,3 +77,24 @@ ierror {
   background: #F8FAF5; 
   margin:0 auto;
 }
+
+.board {
+  position: relative;
+  top: 0vh;
+  left: 0vw;
+  cursor:pointer;
+  flex: 1;
+}
+
+.board img {
+  width: 10vw;
+  height: 10vh;
+  border-radius: 15%;
+  flex: 1;
+  
+}
+
+.carderror h1{
+  margin-top: 100px;
+}
+    
