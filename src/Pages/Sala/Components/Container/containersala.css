@@ -19,14 +19,15 @@
 
 .box-salas .containersala g{
     text-align: center;
-    margin-left: 0;
+    margin-left: 25%;
+    font-weight: bold;
 }
 
 .p{
     margin-left: 45%;  
 }
 .containersala .buttoninit{
-    margin-left: 60%;
+    margin-left: 42%;
     margin-top: 0%;
     background: #3D94F6;
     background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);

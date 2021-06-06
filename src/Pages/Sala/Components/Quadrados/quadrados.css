@@ -51,6 +51,10 @@
   top: 100%;
   
 }
+.quadrado-containerSala  li img{
+  width: 100px;
+  height: 100px;
+}
 
 .quadrado-containerSala li p + strong {
   margin-top: 32px;

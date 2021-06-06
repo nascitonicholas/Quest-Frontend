@@ -7,16 +7,20 @@ export default function CriaQuadrados({itens, page}) {
   const history = useHistory();
   itens = [
     {
-    name:"Roberto" 
+    name:"Roberto",
+    icone: "https://www.amcharts.com/lib/images/faces/C01.png"  
   }, 
   {
-    name:"Gabriel" 
+    name:"Gabriel",
+    icone: "https://www.amcharts.com/lib/images/faces/C02.png" 
   },
   {
-    name:"Kaique" 
+    name:"Kaique",
+    icone: "https://www.amcharts.com/lib/images/faces/C04.png" 
   }, 
   {
-    name:"Carlos" 
+    name:"Carlos",
+    icone: "https://www.amcharts.com/lib/images/faces/C03.png" 
   }
   ]
   async function handleCategoriaEscolhida(item) {
@@ -33,7 +37,7 @@ export default function CriaQuadrados({itens, page}) {
               <li key={item.name}>
                 
                 
-                  <img src="user.jpg" alt=""/>
+                  <img src={item.icone} alt=""/>
                                 
                 <p>{item.name}</p>
               </li>

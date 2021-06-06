@@ -8,8 +8,9 @@ import Containernovasala from '../Container/containernovasala'
 export default function BoxSalas(){
 
     return(
+        
         <div className="box-salas">
-            <Containernovasala/>
+            <Containernovasala disabled="disabled"/>
             <Containersala/>
         </div>
     )
