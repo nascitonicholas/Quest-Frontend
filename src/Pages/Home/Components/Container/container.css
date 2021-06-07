@@ -1,0 +1,44 @@
+.box-central .container{
+    border-style: solid;
+    border-color: #95a5a6;
+    border-radius: 3.5%;
+    width: 400px;
+    height: 450px;
+    margin-left: 50%;
+    margin-top: -35%;
+    align-content: center;
+}
+
+
+.box-central .container .msg-selecionar-sala{
+    font-size: 40px;
+    margin-top: 5px;
+    font-family: sans-serif;
+    color: #494949;
+}
+
+
+
+.box-central .container .box-nova-sala{
+    align-content: center;
+    margin-left: 10%;
+    text-align: center;
+}
+
+
+.box-central .container .box-nova-sala {
+    align-content: center;
+    margin-left: 10%;
+}
+
+
+.box-central .container .box-nova-sala .button{
+    align-content: center;
+    margin-left: -10%;
+
+}
+
+.box-central .container .box-nova-sala .text-nova-sala{
+    font-size: 25px;
+    margin-right: 20px;
+}

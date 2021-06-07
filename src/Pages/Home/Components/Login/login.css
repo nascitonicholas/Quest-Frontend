@@ -1,0 +1,13 @@
+.login{
+    width: 280px;
+    height: 200px;
+    border-radius: 2%;
+    border-width: 1px 1px 1px 1px;
+    margin-left: 30px;
+}
+
+.login .apelido{
+    font-size: 40px;
+    font-family: sans-serif;
+    color: #84817a;
+}

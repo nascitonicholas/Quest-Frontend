@@ -1,6 +1,7 @@
 import { React } from "react";
 import Header from '../../shared/components/Header/header'
-import Login from './components/Login/login.js'
+import Footer from '../../shared/components/Footer/footer'
+import BoxCentral from './components/BoxCentral/BoxCentral'
 
 export default function Home() {
 
@@ -9,7 +10,8 @@ export default function Home() {
   return (
     <div className="container">
       <Header />
-      <Login/>
+      <BoxCentral/>
+      <Footer/>
     </div>
       
   )
