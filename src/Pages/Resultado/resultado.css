@@ -82,13 +82,12 @@ ierror {
   position: relative;
   top: 0vh;
   left: 0vw;
-  cursor:pointer;
   flex: 1;
 }
 
 .board img {
-  width: 10vw;
-  height: 10vh;
+  width: 15w;
+  height: 15vh;
   border-radius: 15%;
   flex: 1;
   
