@@ -1,12 +1,12 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Home from '../Pages/Home/home.js'
-import Sala from '../Pages/Sala/sala.js'
-import Categoria from '../Pages/Categoria/categoria.js';
-import Aposta from '../Pages/Aposta/aposta.js';
-import Resposta from '../Pages/Resposta/resposta.js';
-import Resultado from '../Pages/Resultado/resultado.js';
-import Ranking from '../Pages/Ranking/ranking.js';
+import Home from '../pages/Home/home.js'
+import Sala from '../pages/Sala/sala.js'
+import Categoria from '../pages/Categoria/categoria.js';
+import Aposta from '../pages/Aposta/aposta.js';
+import Resposta from '../pages/Resposta/resposta.js';
+import Resultado from '../pages/Resultado/resultado.js';
+import Ranking from '../pages/Ranking/ranking.js';
 
 
 export default function Routes(){
