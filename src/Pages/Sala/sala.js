@@ -1,6 +1,6 @@
 import { React } from "react";
 import Header from '../../shared/components/Header/header';
-import Apresentacao from '../../shared/components/Apresentacao/Apresentacao.js';
+import Apresentacao from '../../shared/components/Apresentacao/apresentacao.js';
 import Footer from '../../shared/components/Footer/footer';
 import BoxSalas from './Components/BoxSalas/boxsalas.js'
 
