@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import './listaSalas.css'
 
 const useStyles = makeStyles(theme => ({
     formControl: {
@@ -21,15 +22,30 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
+const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' }
+]
 
 
-const names = [
-    'Sala A',
-    'Sala B',
-    'Sala C',
-    'Sala D',
-    'Sala E'
-];
+const salasDisponiveis = [
+    {
+        id: 1,
+        title: 'Sala A',
+        qtdaJog: 2
+    },
+    {
+        id: 2,
+        title: 'Sala B',
+        qtdaJog: 2
+    },
+    {
+        id: 3,
+        title: 'Sala C',
+        qtdaJog: 3
+    }
+]
 
 export default function MultipleSelect() {
     const classes = useStyles();
@@ -48,26 +64,17 @@ export default function MultipleSelect() {
 
     return (
         <div className="box-lista-sala">
-            <FormControl className={classes.formControl}>
-                <Select
-                    multiple
-                    native
-                    value={personName}
-                    onChange={handleChangeMultiple}
-                    inputProps={{
-                        id: 'select-multiple-native'
-                    }}
-                >
-                    {names.map(name => (
-                        <option key={name} value={name}>
-                            {name}
-                            {1}
-                        </option>
 
-                    ))}
+            {
+                salasDisponiveis.map(item => (
+                    <div className="item-lista" key={item.id}>
+                        <td className="titulo">{item.title}</td>
+                        <td className="qdta"> {item.qtdaJog}</td>
+                    </div>
+                )
+                )
 
-                </Select>
-            </FormControl>
+            }
         </div>
     );
 }
