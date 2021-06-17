@@ -6,13 +6,18 @@ import Footer from '../../shared/components/Footer/footer.js';
 import './aposta.css';
 
 export default function Aposta() {
+
+  useEffect(() => {
+
+  }, []);
+
   const perguntaEscolhida = localStorage.getItem('perguntaEscolhida');
   const jogador = localStorage.getItem('jogador') || 'Jogador1';
   const jogadorVez = localStorage.getItem('jogadorDaVez') || 'jogador1';
   const [buttonFichasHabilitado, setButtonFichasHabilitado] = useState(false);
   const [buttonAcertarHabilitado, setButtonAcertarHabilitado] = useState((jogadorVez === jogador ? true : false));
-  const alternativasDisponiveis = localStorage.getItem('alternativasDisponiveis');
-  const alternativas = alternativasDisponiveis.split(',');
+  //const alternativasDisponiveis = localStorage.getItem('alternativasDisponiveis');
+  //const alternativas = alternativasDisponiveis.split(',');
   const fichas = [1, 2, 3, 5];
   const history = useHistory();
   var cronometro = 0;
@@ -20,14 +25,14 @@ export default function Aposta() {
   const apostaIntervalo = setInterval(() => {
     cronometro = cronometro + 1;
     console.log(cronometro);
-    if(cronometro == 30){
-      if(localStorage.getItem('valorApostado') == 'null'){
+    if(cronometro === 30){
+      if(localStorage.getItem('valorApostado') === 'null'){
         defineAposta(fichas[getRandomInt(0,5)]);
       }
-      if(localStorage.getItem('flagAcertar') == 'null'){
-        defineCondicaoAposta(getRandomInt(0,2) == 0? true:false);
+      if(localStorage.getItem('flagAcertar') ==='null'){
+        defineCondicaoAposta(getRandomInt(0,2) === 0? true:false);
       }
-      if(localStorage.getItem('valorApostado') != 'null' && localStorage.getItem('flagAcertar') != 'null'){
+      if(localStorage.getItem('valorApostado') !== 'null' && localStorage.getItem('flagAcertar') !== 'null'){
         redirecionaTelaRespostas();
       }
     }

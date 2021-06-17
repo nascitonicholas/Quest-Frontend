@@ -1,35 +1,13 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+import React, { useEffect, useState } from 'react';
 import './listaSalas.css'
+import api from '../../../../services/api';
+import io from "socket.io-client";
 
-const useStyles = makeStyles(theme => ({
-    formControl: {
-        margin: theme.spacing(3),
-        minWidth: 300,
-        maxWidth: 400
-    },
-    chips: {
-        display: 'flex',
-        flexWrap: 'wrap'
-    },
-    chip: {
-        margin: 4
-    },
-    noLabel: {
-        marginTop: theme.spacing(1)
-    }
-}));
+/*Teste Conexão com Socket.io*/
+const socket = io('http://localhost:8080');
+socket.on('connect', () => console.log('[IO] Connect => A new connection has been established'))
 
-const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' }
-]
-
-
-const salasDisponiveis = [
+const mockRooms = [
     {
         id: 1,
         title: 'Sala A',
@@ -44,11 +22,31 @@ const salasDisponiveis = [
         id: 3,
         title: 'Sala C',
         qtdaJog: 3
+    },
+    {
+        id: 4,
+        title: 'Sala D',
+        qtdaJog: 3
+    },
+    {
+        id: 5,
+        title: 'Sala E',
+        qtdaJog: 3
+    },
+    {
+        id: 6,
+        title: 'Sala F',
+        qtdaJog: 3
     }
 ]
 
 export default function MultipleSelect() {
-    const classes = useStyles();
+
+    
+
+
+    const [rooms, setRooms] = useState([]);
+    /*
     const [personName, setPersonName] = React.useState([]);
 
     const handleChangeMultiple = event => {
@@ -61,12 +59,33 @@ export default function MultipleSelect() {
         }
         setPersonName(value);
     };
+    */
+
+    /*
+    useEffect(() => {
+        socket.on()
+    },[])
+    */
+
+   
+    useEffect(() => {
+        api.get('list-rooms',{
+            headers:{
+
+            }
+        }).then( response => {
+            setRooms(response.data);
+        });
+    },[])
+
+
+    console.log(rooms);
 
     return (
         <div className="box-lista-sala">
 
             {
-                salasDisponiveis.map(item => (
+                mockRooms.map(item => (
                     <div className="item-lista" key={item.id}>
                         <td className="titulo">{item.title}</td>
                         <td className="qdta"> {item.qtdaJog}</td>

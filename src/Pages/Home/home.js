@@ -1,7 +1,7 @@
 import { React } from "react";
 import Header from '../../shared/components/Header/header'
 import Footer from '../../shared/components/Footer/footer'
-import BoxCentral from './components/BoxCentral/BoxCentral'
+import BoxCentral from './Components/BoxCentral/BoxCentral'
 
 export default function Home() {
 

@@ -6,6 +6,11 @@ import Timer from '../../shared/components/Cronometro/timer.jsx';
 import './resposta.css';
 
 export default function Resposta() {
+
+  useEffect(() => {
+
+  }, []);
+
   const perguntaEscolhida = localStorage.getItem('perguntaEscolhida');
   const alternativas = localStorage.getItem('alternativasDisponiveis').split(',');
   const history = useHistory();
@@ -13,11 +18,11 @@ export default function Resposta() {
 
   const apostaIntervalo = setInterval(() => {
     cronometro = cronometro + 1;
-    if(cronometro == 30){
-      if(localStorage.getItem('valorApostado') == 'null'){
+    if(cronometro === 30){
+      if(localStorage.getItem('valorApostado') === 'null'){
         defineAlternativa(alternativas[getRandomInt(0, 5)]);
       }
-      if(localStorage.getItem('valorApostado') != 'null' && localStorage.getItem('flagAcertar') != 'null'){
+      if(localStorage.getItem('valorApostado') !== 'null' && localStorage.getItem('flagAcertar') !== 'null'){
         redirecionaTelas();
       }
     }

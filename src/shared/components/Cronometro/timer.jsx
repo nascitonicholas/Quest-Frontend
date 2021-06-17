@@ -1,8 +1,10 @@
-import React, { Component, useEffect } from "react";
+import React, { Component} from "react";
 import imgCronometro from "../../../assets/cronometro.png";
 import "./timer.css";
 
 class Timer extends Component {
+
+  
 
   constructor(props) {
     super(props);
