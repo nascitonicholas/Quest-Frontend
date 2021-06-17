@@ -1,11 +1,25 @@
-import { React } from "react";
+
+
+import { React, useEffect, useState } from "react";
 import Header from '../../shared/components/Header/header'
 import Footer from '../../shared/components/Footer/footer'
 import BoxCentral from './components/BoxCentral/BoxCentral'
-export default function Home() {
+import newVisitor from '../../shared/components/connection/socketExp.js'
 
+
+
+ 
+
+
+
+export default function Home() {
+  
+  useEffect(() => {
+    newVisitor() 
+  }, [])
+  
   return (
-    <div className="container">
+   <div className="container" >
       <Header />
       <BoxCentral/>
       <Footer/>
