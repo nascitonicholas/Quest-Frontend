@@ -19,8 +19,32 @@ var salas = [sala];
 var jogadores = [jogador];
 
 
+function criarJogador(jogadorId, nickname){
+    var player = {
+        playerId = jogadorId,
+        nickname = nickname
+    }
+
+    $.ajax({
+        type: "POST",
+        url: apiUrl+"/create-player",
+        data: JSON.stringify(player),
+        contentType: "application/json",
+        dataType: "json",
+        statusCode: {
+            201: () => {
+                $(".alert-success").removeClass('d-none');
+            }
+        },
+        error: (data) => {
+            console.log("Falha ao criar jogador. Erro: ",data)
+            if (data.status == 201) return;
+        }
+    });
+}
+
 function buscarSalas() {
-    $.get(apiUrl+"/create-player", function (data) {
+    $.get(apiUrl+"/list-rooms", function (data) {
         data.forEach(x => {
             sala = x;
             salas.push(sala);
@@ -42,6 +66,5 @@ function criarSala(salaReq){
                return data;     
             }        
         }
-    });
-    
+    });  
 }
