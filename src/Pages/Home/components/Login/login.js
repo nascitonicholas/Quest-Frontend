@@ -6,7 +6,7 @@ import './login.css'
 export default  function Login () {
 
         return (
-            <div className="login">
+            <div className="form-entrada">
                 <h1 className='apelido'>Seu Apelido</h1>
                 <Label/>
                 <Button link='/sala' name='Confirmar' class='button'/>
