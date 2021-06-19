@@ -1,52 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import './listaSalas.css'
-import api from '../../../../services/api';
-import io from "socket.io-client";
+import React from 'react';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
-/*Teste Conexão com Socket.io*/
-const socket = io('http://localhost:8080');
-socket.on('connect', () => console.log('[IO] Connect => A new connection has been established'))
-
-const mockRooms = [
-    {
-        id: 1,
-        title: 'Sala A',
-        qtdaJog: 2
+const useStyles = makeStyles(theme => ({
+    formControl: {
+        margin: theme.spacing(2),
+        minWidth: 370,
+        maxWidth: 300
     },
-    {
-        id: 2,
-        title: 'Sala B',
-        qtdaJog: 2
+    chips: {
+        display: 'flex',
+        flexWrap: 'wrap'
     },
-    {
-        id: 3,
-        title: 'Sala C',
-        qtdaJog: 3
+    chip: {
+        margin: 4
     },
-    {
-        id: 4,
-        title: 'Sala D',
-        qtdaJog: 3
-    },
-    {
-        id: 5,
-        title: 'Sala E',
-        qtdaJog: 3
-    },
-    {
-        id: 6,
-        title: 'Sala F',
-        qtdaJog: 3
+    noLabel: {
+        marginTop: theme.spacing(6)
     }
-]
+}));
+
+
+
+const names = [
+    'Sala A',
+    'Sala B',
+    'Sala C',
+    'Sala D',
+    'Sala E'
+];
 
 export default function MultipleSelect() {
-
-    
-
-
-    const [rooms, setRooms] = useState([]);
-    /*
+    const classes = useStyles();
     const [personName, setPersonName] = React.useState([]);
 
     const handleChangeMultiple = event => {
@@ -59,41 +45,29 @@ export default function MultipleSelect() {
         }
         setPersonName(value);
     };
-    */
-
-    /*
-    useEffect(() => {
-        socket.on()
-    },[])
-    */
-
-   
-    useEffect(() => {
-        api.get('list-rooms',{
-            headers:{
-
-            }
-        }).then( response => {
-            setRooms(response.data);
-        });
-    },[])
-
-
-    console.log(rooms);
 
     return (
-        <div className="box-lista-sala">
+        <div>
 
-            {
-                mockRooms.map(item => (
-                    <div className="item-lista" key={item.id}>
-                        <td className="titulo">{item.title}</td>
-                        <td className="qdta"> {item.qtdaJog}</td>
-                    </div>
-                )
-                )
+            <FormControl className={classes.formControl}>
+                <Select
+                    multiple
+                    native
+                    value={personName}
+                    onChange={handleChangeMultiple}
+                    inputProps={{
+                        id: 'select-multiple-native'
+                    }}
+                >
+                    {names.map(name => (
+                        <option key={name} value={name}>
+                            {name}
+                        </option>
+                        
+                    ))}
 
-            }
+                </Select>
+            </FormControl>
         </div>
     );
 }
