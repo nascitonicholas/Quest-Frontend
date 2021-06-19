@@ -15,10 +15,6 @@ export default function CriaQuadrados({itens, page}) {
     history.push('/aposta');
   }
 
-  useEffect(() => {
-
-  }, []);
-
   switch (page) {
     case 'Categorias':
       return(
