@@ -1,0 +1,14 @@
+.login{
+    width: 280px;
+    height: 200px;
+    border-radius: 2%;
+    
+    border-width: 1px 1px 1px 1px;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.login h1{
+    font-size: 25px;
+    margin-left: 5%;
+}

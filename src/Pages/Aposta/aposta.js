@@ -46,6 +46,7 @@ export default function Aposta() {
   async function defineAposta(valorAposta) {
     setButtonFichasHabilitado(true);
     localStorage.setItem('valorApostado', valorAposta);
+    //history.push('/resposta')
   }
   async function defineCondicaoAposta(flagAcertar) {
     setButtonAcertarHabilitado(true);

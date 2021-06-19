@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import './quadrados.css';
 
@@ -9,6 +9,8 @@ export default function CriaQuadrados({itens, page}) {
     localStorage.setItem('categoriaEscolhida', item.categoria);
     localStorage.setItem('perguntaEscolhida', item.pergunta);
     localStorage.setItem('alternativasDisponiveis', item.respostas);
+    localStorage.setItem('jogadorDaVez', 'item.respostas');
+    localStorage.setItem('jogador', 'item.resposta');
     localStorage.setItem('alternativasCerta', item.respostaCe);
     history.push('/aposta');
   }

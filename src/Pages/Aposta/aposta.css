@@ -38,6 +38,8 @@ button {
 }
 
 .btnFlagAcertar + .btnFlagAcertar {
+  border-color: #8b0000;
+  background-color: red;
   margin-left: 280px;
 }
 
@@ -58,9 +60,4 @@ button {
 
 .btnAposta + .btnAposta {
   margin-left: 150px;
-}
-
-button:disabled {
-  background-color: #dcdcdc;
-  border-color: #a9a9a9;
 }

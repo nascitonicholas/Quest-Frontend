@@ -1,4 +1,4 @@
-import React, { Component} from "react";
+import React, { Component, useEffect } from "react";
 import imgCronometro from "../../../assets/cronometro.png";
 import "./timer.css";
 

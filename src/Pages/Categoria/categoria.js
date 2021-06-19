@@ -9,26 +9,22 @@ export default function Categoria() {
           {
            'categoria' : 'Tecnologia',
            'pergunta'  : 'O que é tecnologia?',
-           'respostas' : ['Tecnologia A', 'Tecnologia B', 'Tecnologia C', 'Tecnologia D'],
-           'respostaCe': 'Tecnologia A'
+           'respostas' : ['Tecnologia A', 'Tecnologia B', 'Tecnologia C', 'Tecnologia D']
           },
           {
             'categoria' : 'História',
             'pergunta'  : 'O que é historia?',
-            'respostas' : ['Historia A', 'Historia B', 'Historia C', 'Historia D'],
-            'respostaCe': 'Historia B'
+            'respostas' : ['Historia A', 'Historia B', 'Historia C', 'Historia D']
           },
           {
           'categoria' : 'Matematica',
           'pergunta'  : 'O que é matematica',
-          'respostas' : ['Matematica A', 'Matematica B', 'Matematica C', 'Matematica D'],
-          'respostaCe': 'Matematica C'
+          'respostas' : ['Matematica A', 'Matematica B', 'Matematica C', 'Matematica D']
           },
           {
           'categoria' : 'Infraestrutura',
           'pergunta'  : 'O que é Infraestrutura?',
-          'respostas' : ['Infraestrutura A', 'Infraestrutura B', 'Infraestrutura C', 'Infraestrutura D'],
-          'respostaCe': 'Infraestrutura D'
+          'respostas' : ['Infraestrutura A', 'Infraestrutura B', 'Infraestrutura C', 'Infraestrutura D']
           }
          ];
   

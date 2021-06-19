@@ -6,6 +6,7 @@ import Categoria from '../pages/Categoria/categoria.js';
 import Aposta from '../pages/Aposta/aposta.js';
 import Resposta from '../pages/Resposta/resposta.js';
 import Resultado from '../pages/Resultado/resultado.js';
+import Ranking from '../pages/Ranking/ranking.js';
 
 
 export default function Routes(){
@@ -14,6 +15,7 @@ export default function Routes(){
             <Switch>
                 <Route path='/' exact component={Home} />
                 <Route path='/sala' component={Sala} />
+                <Route path='/ranking' component={Ranking} />
                 <Route path='/categoria' component={Categoria} />
                 <Route path='/aposta' component={Aposta} />
                 <Route path='/resposta' component={Resposta} />
