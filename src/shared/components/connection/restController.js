@@ -1,70 +1,73 @@
-import { string } from "@amcharts/amcharts4/core";
+const { JSDOM } = require("jsdom");
+const { window } = new JSDOM("");
+const $ = require("jquery")(window);
 
-const apiUrl = 'https://localhost:8080/';
+function RestController() {
+    const apiUrl = 'http://localhost:8080';
 
-var jogador = {
-    playerId,
-    playerName,
-}
+    var salas = [];
+    var jogadores = [];
 
-var sala = {
-    roomId,
-    roomName,
-    players: jogadores,
-    maxPlayers,
-    socketUp
-};
-
-var salas = [sala];
-var jogadores = [jogador];
-
-
-function criarJogador(jogadorId, nickname){
-    var player = {
-        playerId = jogadorId,
-        nickname = nickname
+    var sala = {
+        salaId:"",
+        salaNome:"",
+        jogadores:[],
+        maximoJogadores:""
     }
 
-    $.ajax({
-        type: "POST",
-        url: apiUrl+"/create-player",
-        data: JSON.stringify(player),
-        contentType: "application/json",
-        dataType: "json",
-        statusCode: {
-            201: () => {
-                $(".alert-success").removeClass('d-none');
+    this.criarJogador = (jogadorId, nickname) => {
+        var player = {
+            playerId: jogadorId,
+            playerName: nickname
+        }
+
+        $.ajax({
+            type: "POST",
+            url: apiUrl + "/create-player",
+            data: JSON.stringify(player),
+            contentType: "application/json",
+            dataType: "json",
+            function(data, status) {
+                console.log('xxx', status)
+                if (status == 201) {
+                    return data;
+                }
             }
-        },
-        error: (data) => {
-            console.log("Falha ao criar jogador. Erro: ",data)
-            if (data.status == 201) return;
-        }
-    });
-}
-
-function buscarSalas() {
-    $.get(apiUrl+"/list-rooms", function (data) {
-        data.forEach(x => {
-            sala = x;
-            salas.push(sala);
         });
-    });
-    return salas;
-}
+
+    }
+
+    this.buscarSalas = () => {
+        $.get(apiUrl + "/list-rooms", function (data) {
+            console.log('data ',data);
+            return data;
+        });
+    }
 
 
-function criarSala(salaReq){
-    $.ajax({
-        type: "POST",
-        url: apiUrl+"/create-room",
-        data: JSON.stringify(salaReq),
-        contentType: "application/json",
-        dataType: "json",
-        function(data, status){
-            if(status == 201){
-               return data;     
-            }        
-        }
-    });  
+    this.criarSala = (salaReq) => {
+        console.log("request: ", salaReq);
+
+        $.ajax({
+            type: "POST",
+            url: apiUrl + "/create-room",
+            data: JSON.stringify(salaReq),
+            contentType: "application/json",
+            dataType: "json",
+
+            success: function (data) {
+                $('#target').html(data.msg);
+                console.log('data: ', data);
+                var sala = {
+                    salaId : data.roomId,
+                    salaNome : data.roomName,
+                    jogadores : data.players,
+                    maximoJogadores : data.maxPlayers
+                }
+                console.log('buildSala ', sala);
+                return sala;
+            },
+        });
+    }
 }
+module.exports = RestController;
