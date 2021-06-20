@@ -7,7 +7,7 @@ import Aposta from '../pages/Aposta/aposta.js';
 import Resposta from '../pages/Resposta/resposta.js';
 import Resultado from '../pages/Resultado/resultado.js';
 import Ranking from '../pages/Ranking/ranking.js';
-
+import Lobby from '../pages/Sala/lobby.js'
 
 export default function Routes(){
     return(
@@ -20,6 +20,7 @@ export default function Routes(){
                 <Route path='/aposta' component={Aposta} />
                 <Route path='/resposta' component={Resposta} />
                 <Route path='/resultado' component={Resultado} />
+                <Route path='/lobby' component={Lobby} />
             </Switch>
         </BrowserRouter>
     );

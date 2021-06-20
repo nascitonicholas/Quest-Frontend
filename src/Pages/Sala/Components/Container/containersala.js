@@ -24,11 +24,12 @@ export default function containersala(sala){
     let i = Math.floor(Math.random() * (5 - 1)) + 1;
     return(
         <div className='containersala'>
-            <h2>Sala {arraySalas[i].nome}</h2>
+            <div className="Titulo"><h2>Sala {arraySalas[i].nome}</h2></div>
             
-            <g>Quando estiver pronto, Clique em iniciar</g>
+            <div className="Texto"><g>Quando estiver pronto, clique em iniciar</g></div>
             <Quadrados/>
-            <Buttoninit link='categoria' name='Iniciar' class='buttoninit'/>
+            <div className="Voltar"><Buttoninit link='sala' name='Voltar' class='buttoninit'/></div>
+            <div className="Iniciar"><Buttoninit link='categoria' name='Iniciar' class='buttoninit'/></div>
         </div>
     )
 }

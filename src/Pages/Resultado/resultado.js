@@ -14,7 +14,7 @@ export function Mensagem(mensagem1) {
   switch (mensagem1) {
     case 1:
       texto1 = "Inteligentão"
-      texto = "Burro"
+      texto = "Burrinho"
       console.log("Burro")
       return texto;
     case 2: 
@@ -56,7 +56,7 @@ export default function Resposta(resposta) {
   Mensagem(mensagem);
   
    /* switch (resposta) {
-        case 'Correto': */
+        case 'Correto': 
     return (
     <div>
           <Header />
@@ -77,9 +77,9 @@ export default function Resposta(resposta) {
           <Footer />
       </div>
         
-   );
+   );*/
 
-    /*case 'Errado':
+    //case 'Errado':
         return (
           
           <div>
@@ -102,8 +102,7 @@ export default function Resposta(resposta) {
           </div>
             
         );
-}*/
-
+//}
 
 
 
