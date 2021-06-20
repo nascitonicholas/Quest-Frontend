@@ -13,5 +13,6 @@ export default function ListSalas({ items, fetchMore, hasMore }) {
         {({ item }) => <div>{item}</div>}
       </InfiniteLoading>
     </div>
+   
   )
 }
