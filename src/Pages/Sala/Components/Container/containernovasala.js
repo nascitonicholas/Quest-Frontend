@@ -13,20 +13,24 @@ import { SettingsOverscanOutlined } from '@material-ui/icons';
 const controller = new RestController();
 let nomeSalaOut
 let nomeSalaIn
-
+let idtest
+let salaResponse
 const createRoomButton = () =>  {
+    
     var salaRequest = {
         roomName: nomeSalaOut, 
-        playerId: "10",
+        playerId: idtest,
         maxPlayers: "3"
     }  
-    const salaResponse = controller.criarSala(salaRequest)
-    
+    salaResponse = controller.criarSala(salaRequest)
+    localStorage.setItem('idRoom', salaResponse)
     //console.log(salaResponse)
   }
 
 export default function containernovasala(){
-    
+    const [idRoom, setIdRoom] = useState('');
+    idtest = localStorage.getItem('id')
+    console.log(idtest)
     const [value, setValue] = useState("");
    
     const handleChange = e => {

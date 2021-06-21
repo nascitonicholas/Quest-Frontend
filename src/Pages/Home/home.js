@@ -4,6 +4,7 @@ import Footer from '../../shared/components/Footer/footer'
 import BoxCentral from './Components/BoxCentral/BoxCentral'
 import newVisitor from '../../shared/components/connection/socketExp.js'
 import RestController from '../../shared/components/connection/restController.js'
+import Login from './Components/Login/login.js';
 
 const controller = new RestController();
 
@@ -23,19 +24,16 @@ export default function Home() {
 
   //localStorage.clear();
 
-  useEffect(() => {
-    let socketid = newVisitor()
-    console.log(socketid)
-    //let player = criaJogadorTest(socketid); 
-    //console.log(player)
-  }, [])
+  
 
   return (
    <div className="container" >
       <Header/>
       <BoxCentral/>
+      
       <Footer/>
     </div>
       
   )
 }
+//<BoxCentral/>

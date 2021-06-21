@@ -1,30 +1,44 @@
-import React, {useState}  from 'react';
+import React, {useState, useEffect}  from 'react';
 import Label from '../../../../shared/components/Label/label.js';
 import Button from '../../../../shared/components/Button/button.js';
 import './login.css'
 import '../../../../shared/components/Button/button.css'
 import '../../../../shared/components/Label/label.css'
+
+import newVisitor from '../../../../shared/components/connection/socketExp.js'
 import RestController from '../../../../shared/components/connection/restController.js'
 import TextField from '@material-ui/core/TextField';
 let jogadorID 
 let jogador
-
+let socketid
+//isso
 const controller = new RestController();
 const criaJogadorTest = () => {
     //var jogador = "gabriel";
     //var jogadorID = 10;
    
     
-    var pessoa = controller.criarJogador(jogadorID, jogador);
+    var pessoa = controller.criarJogador(socketid, jogador);
+    console.log(pessoa)
     return pessoa
   }
 export default  function Login () {
+    const [id, setId] = useState('');
+
     const [value, setValue] = useState("");
+    useEffect(() => {
+        socketid = newVisitor()
+        console.log(socketid)
+        localStorage.setItem('id', socketid)
+        //let player = criaJogadorTest(socketid); 
+        //console.log(player)
+      }, [])
    
     const handleChange = e => {
         console.log(`digitado ${e.target.value}`);
         setValue(e.target.value)
         jogador = e.target.value
+        //jogadorID = userID
     };
 
         return (
@@ -37,7 +51,7 @@ export default  function Login () {
             </form>
             </div>
                 <div>
-                <a onClick={criaJogadorTest} className={'button'}>{'Confirmar'}</a>
+                <a onClick={criaJogadorTest} href='/sala' className={'button'}>{'Confirmar'}</a>
             </div>
                
             </div>
