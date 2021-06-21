@@ -4,7 +4,7 @@ import Buttoninit from '../../../../shared/components/Button/button.js';
 import ListaSalas from '../ListaSalas/listaSalas'
 import Quadrados from "../Quadrados/quadrados.js"
 
-
+let idRoom
 let arraySalas = [{
     nome: "XPTO"
 },
@@ -21,6 +21,8 @@ let arraySalas = [{
 }]
 
 export default function containersala(sala){
+    idRoom = localStorage.getItem('idRoom')
+    console.log(idRoom)
     let i = Math.floor(Math.random() * (5 - 1)) + 1;
     return(
         <div className='containersala'>
