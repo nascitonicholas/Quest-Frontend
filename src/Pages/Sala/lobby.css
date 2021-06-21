@@ -1,0 +1,10 @@
+.boxSala .containersala{
+    border-style: solid;
+    border-color: #95a5a6;
+    border-radius: 5.5%;
+    width: 700px;
+    height: 500px;
+    margin-left: 32%;
+    margin-top: 15px;
+    align-items: center;
+  }

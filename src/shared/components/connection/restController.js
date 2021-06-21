@@ -1,8 +1,9 @@
 const { JSDOM } = require("jsdom");
 const { window } = new JSDOM("");
-const $ = require("jquery")(window);
+//const $ = require("jquery")(window);
+import $, { data } from 'jquery';
 
-function RestController() {
+export default function RestController() {
     const apiUrl = 'http://localhost:8080';
 
     var salas = [];
@@ -20,8 +21,7 @@ function RestController() {
             playerId: jogadorId,
             playerName: nickname
         }
-
-        $.ajax({
+       var respostaCriar = $.ajax({
             type: "POST",
             url: apiUrl + "/create-player",
             data: JSON.stringify(player),
@@ -34,7 +34,7 @@ function RestController() {
                 }
             }
         });
-
+        return respostaCriar
     }
 
     this.buscarSalas = () => {
@@ -47,7 +47,9 @@ function RestController() {
 
     this.criarSala = (salaReq) => {
         console.log("request: ", salaReq);
-
+        var responseSala1
+       
+        
         $.ajax({
             type: "POST",
             url: apiUrl + "/create-room",
@@ -58,16 +60,18 @@ function RestController() {
             success: function (data) {
                 $('#target').html(data.msg);
                 console.log('data: ', data);
-                var sala = {
+                    var sala = {
                     salaId : data.roomId,
                     salaNome : data.roomName,
                     jogadores : data.players,
                     maximoJogadores : data.maxPlayers
                 }
                 console.log('buildSala ', sala);
-                return sala;
+                responseSala1 = JSON.parse(sala)
+                //return sala;
             },
         });
+      return sala;
     }
 }
-module.exports = RestController;
+//module.exports = RestController;
